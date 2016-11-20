@@ -1,76 +1,80 @@
-/**
- * Body
- */
-body {
-  background-color: $color-grey;
-}
+main {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 
-/**
- * Sections
- */
-section {
-  position: relative;
-}
-
-.section-padding {
-  padding: 4em 0;
-
-  &--lg {
-    padding: 6em 0;
-  }
-
-  &--sm {
-    padding: 2em 0;
-  }
-}
-
-/**
- * Class Container (BEM)
- */
-[class*='__container'] {
-  position: relative;
-  z-index: 1;
-}
-
-/**
- * Blog page
- */
-.previews {
-
-  @media (max-width: $mq-md) {
+  & > div {
+    position: fixed;
+    width: 45vw;
+    height: 100vh;
+    background-color: $light-gray-color;
+    color: white;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url('https://unsplash.it/960/1024?random&gravity=center');
+    background-size: cover;
+
+    & img {
+      max-height: 75vh;
+    }
   }
 
-  & > * {
+  & > article {
+    margin-left: 45vw;
+    // padding: $offset;
 
-    &:first-child {
-      position: relative;
+    & > * {
+      padding-left: $offset;
+      padding-right: $offset;
+    }
 
-      height: 30em;
+    & > header, & > footer {
+      padding-top: $offset;
+      padding-bottom: $offset;
 
-      background-color: $color-black;
+      & a {
+        color: $accent-color;
 
-      @media (min-width: $mq-md) {
-        position: fixed;
-        top: 0;
-        left: 0;
-
-        height: 100%;
-        width: 45%;
-      }
-
-      &:after {
-        @extend %overlay;
       }
     }
 
-    &:last-child {
-      min-height: 100vh;
+    & > header {
+      margin-bottom: $offset;
+      box-shadow: 0 1px $light-gray-color;
 
-      @media (min-width: $mq-md) {
-        margin-left: 45%;
+      & .container {
+        display: flex;
+      }
+
+      & .logo img {
+        height: 1.4rem;
+      }
+
+      & nav {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+    }
+
+    & > footer {
+      margin-top: $offset;
+      font-size: $font-size-tiny;
+      color: darken($medium-gray-color, 10%);
+
+      small {
+        display: block;
       }
     }
   }
+}
+
+.container {
+  max-width: $container-base-width;
+  margin: 0 auto;
 }
