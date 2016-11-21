@@ -1,41 +1,49 @@
-.post-list {
-  .category-title {
-    margin: 1em 0 0.5em 0;
+.intro {
+  a {
+    font-weight: normal;
+  }
 
-    &:first-child {
-      margin-top: 0;
-    }
+  p {
+    font-size: $font-size-large;
+  }
+}
+
+.post-list {
+  .group-title {
+    margin-bottom: $offset / 2;
   }
 
   .post-item {
-    margin-bottom: 0.2em;
-    display: block;
+    display: flex;
+    align-items: center;
+    margin-bottom: $offset / 4;
 
-    a {
-      // color: $action-color;
-      font-weight: bold;
+    .title {
+      flex-grow: 1;
+      border-bottom: 1px dashed $light-gray-color;
     }
 
-    .article-title {
-      display: inline-block;
-      width: 85%;
-      border-bottom: 1px dashed lighten($light-gray-color, 10%);
-    }
-
-    .date-label {
-      border: 1px solid lighten($light-gray-color, 10%);
-      padding: 0 0.2em;
-      margin-left: 1em;
-      margin-top: 2px;
-      float: right;
+    .date {
+      margin-left: $offset;
     }
   }
+}
 
-  .post-meta {
-    color: $medium-gray-color;
-    text-transform: uppercase;
-    display: inline-block;
-    letter-spacing: 1px;
-    font-size: rem(14);
+.date {
+  display: inline-block;
+  border: 1px solid $light-gray-color;
+  padding: 0 ($offset / 4);
+  text-transform: uppercase;
+  font-size: $font-size-small;
+  letter-spacing: 1px;
+  color: $secondary-color;
+}
+
+.disqus {
+  background: $secondary-background-color;
+  padding: $offset;
+
+  h3 {
+    margin-top: 0;
   }
 }
