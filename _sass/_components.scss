@@ -32,7 +32,7 @@
 .date {
   display: inline-block;
   border: 1px solid $light-gray-color;
-  padding: 0 ($offset / 4);
+  padding: ($offset / 10) ($offset / 4);
   text-transform: uppercase;
   font-size: $font-size-small;
   letter-spacing: 1px;
@@ -45,5 +45,11 @@
 
   h3 {
     margin-top: 0;
+  }
+}
+
+.map {
+  .anychart-credits {
+    display: none;
   }
 }

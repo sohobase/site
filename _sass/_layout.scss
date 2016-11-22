@@ -8,13 +8,20 @@ main {
   & > div {
     z-index: -1;
     position: fixed;
-    width: 45vw;
-    height: 100vh;
-    color: white;
     display: flex;
+    height: 100vh;
     align-items: center;
     justify-content: center;
     background: $secondary-background-color url('https://unsplash.it/960/1024?random&gravity=center') cover;
+
+    &,
+    & .map {
+      width: 45vw;
+    }
+
+    & .map {
+      height: 90vh;
+    }
   }
 
   & > article {
