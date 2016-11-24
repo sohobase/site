@@ -1,9 +1,8 @@
-// require('babel-register');
-// require('babel-polyfill');
-//
-// const hook = require('css-modules-require-hook');
-// hook({ generateScopedName: '[name]__[local]___[hash:base64:5]' });
-import react from 'react';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Map from './components/Map';
 
-
-console.log('hello world', react);
+anychart.onDocumentReady(function () {
+  const el = document.getElementById('app');
+  if (el) ReactDOM.render(<Map />, el);
+});

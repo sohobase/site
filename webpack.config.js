@@ -2,9 +2,9 @@ const pkg = require('./package');
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const environment = process.env.NODE_ENV;
 const vendor = Object.keys(pkg.dependencies).map((item) => item);
-
-const isDevelopment = true;
+const isDevelopment = environment !== 'release';
 
 module.exports = {
   context: path.join(__dirname, './'),
@@ -43,7 +43,7 @@ module.exports = {
   },
 
   plugins: [
-    new ExtractTextPlugin(`${pkg.name}.[name].css`, { allChunks: true }),
+    new ExtractTextPlugin(`${pkg.name}.css`, { allChunks: true }),
     new webpack.optimize.CommonsChunkPlugin('vendor', `${pkg.name}.vendor.js`),
   ],
 

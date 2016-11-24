@@ -28,6 +28,7 @@
     "eslint-plugin-import": "^1.12.0",
     "eslint-plugin-react": "^6.0.0",
     "extract-text-webpack-plugin": "^1.0.1",
+    "json-loader": "^0.5.4",
     "postcss": "^5.1.2",
     "postcss-cssnext": "~2.7.0",
     "postcss-import": "^8.1.2",
@@ -40,8 +41,10 @@
   },
   "license": "MIT",
   "scripts": {
-    "start": "bundle exec jekyll serve",
-    "release": "bundle exec jekyll build",
+    "start": "NODE_ENV=development npm run webpack & npm run jekyll",
+    "release": "NODE_ENV=release bundle exec jekyll build",
+    "webpack": "webpack -progress",
+    "jekyll": "bundle exec jekyll serve",
     "install": "bundle install"
   }
 }
