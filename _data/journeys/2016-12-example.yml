@@ -1,0 +1,17 @@
+country: united_kingdom
+cities:
+  - name: London
+    lat: 51.507355
+    long: -0.127901
+  - name: Bristol
+    lat: 51.453568
+    long: -2.5888353
+
+journey:
+  - air:
+      - number: 1
+        points: [51.507315, -0.127901, 50.908579, -1.404370, 51.453568, -2.588353]
+        short: From London to Bristol
+        full: On our way to Bristol we stopped in Southampton\nand enjoyed the dinner at restaurant.
+  - car:
+  - ship:

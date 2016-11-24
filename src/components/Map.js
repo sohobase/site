@@ -23,9 +23,10 @@ class Map extends Component {
 
   // -- Lifecycle
   componentWillMount() {
+    const { country } = window.sohobase;
     const map = anychart.connector();
 
-    map.geoData(anychart.maps.japan);
+    map.geoData(anychart.maps[country]);
     map.container('map');
     map.draw();
   }

@@ -116,8 +116,14 @@
   {% if page.country %}
     <script src="http://cdn.anychart.com/geodata/1.2.0/countries/{{page.country}}/{{page.country}}.js"></script>
   {% endif %}
+  {% if page.journey %}
+    {% assign journey = site.data.journeys[page.journey] %}
+    <script src="http://cdn.anychart.com/geodata/1.2.0/countries/{{journey.country}}/{{journey.country}}.js"></script>
+    <script>
+      window.sohobase = {{journey | jsonify}};
+    </script>
 
-  <!-- <script src="/assets/js/anychart.map.js"></script> -->
+  {% endif %}
 
   <!--  App -->
   <link rel="stylesheet" href="/assets/js/sohobase-site.main.css" />
