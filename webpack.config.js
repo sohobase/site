@@ -9,7 +9,7 @@ const isDevelopment = environment !== 'release';
 module.exports = {
   context: path.join(__dirname, './'),
 
-  devtool: 'source-map',
+  devtool: isDevelopment ? undefined : 'source-map',
 
   debug: isDevelopment,
 

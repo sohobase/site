@@ -113,7 +113,10 @@
   <!-- anychart -->
   <link rel="stylesheet" href="https://cdn.anychart.com/css/7.12.0/anychart-ui.min.css" />
   <script src="https://cdn.anychart.com/js/7.12.0/anychart-bundle.min.js"></script>
-  <script src="http://cdn.anychart.com/geodata/1.2.0/countries/united_kingdom/united_kingdom.js"></script>
+  {% if page.country %}
+    <script src="http://cdn.anychart.com/geodata/1.2.0/countries/{{page.country}}/{{page.country}}.js"></script>
+  {% endif %}
+
   <!-- <script src="/assets/js/anychart.map.js"></script> -->
 
   <!--  App -->
