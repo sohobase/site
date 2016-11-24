@@ -19,7 +19,7 @@ markdown    : kramdown
 highlighter : rouge
 
 source: ./
-destination: ./_site
+# destination: ./_site
 
 # Sass configuration
 sass:
