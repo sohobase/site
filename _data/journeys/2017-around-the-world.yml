@@ -1,0 +1,77 @@
+cities:
+  - name: London
+    lat: 51.507351
+    long: -0.127758
+  - name: Bilbao
+    lat: 43.263013
+    long: -2.934985
+  - name: Hong Kong
+    lat: 22.244476
+    long: 114.151046
+  - name: CNX
+    lat: 18.767749
+    long: 98.961820
+  - name: Bogota
+    lat: 4.710989
+    long: -74.072092
+  - name: New York
+    lat: 40.712784
+    long: -74.005941
+  - name: Sidney
+    lat: -33.868820
+    long: 151.209296
+  - name: Cuba
+    lat: 21.521757
+    long: -77.781167
+  - name: Santiago de Chile
+    lat: -33.448890
+    long: -70.669265
+  - name: Wellington
+    lat: -41.286460
+    long: 174.776236
+
+  - name: Tokio
+    lat: 35.689487
+    long: 139.691706
+  - name: Colombo
+    lat: 6.927079
+    long: 79.861243
+  - name: Bali
+    lat: -8.409518
+    long: 115.188916
+  - name: Hawai
+    lat: 19.896766
+    long: -155.582782
+  - name: Mexico DF
+    lat: 19.246470
+    long: -99.101350
+  - name: Vancouver
+    lat: 45.638728
+    long: -122.661486
+  - name: Toronto
+    lat: 43.653226
+    long: -79.383184
+  - name: Cape Town
+    lat: -33.924869
+    long: 18.424055
+  - name: Marrakech
+    lat: 31.629472
+    long: -7.981084
+  - name: Zagora
+    lat: 30.345900
+    long: -5.840659
+
+
+journey:
+  air:
+    # - number: 1
+    #   points: [18.767749, 98.961820, 22.308047, 113.916292]
+    #   short: From Chiang Mai (CNX) to Hong Kong (HKG)
+    #   full: On our way to Bristol we stopped in Southampton\nand enjoyed the dinner at restaurant.
+    #   curvature: 0.25
+
+  train:
+
+  car:
+
+  ship:
