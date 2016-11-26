@@ -115,6 +115,8 @@
   <script src="https://cdn.anychart.com/js/7.12.0/anychart-bundle.min.js"></script>
   {% if page.country %}
     <script src="http://cdn.anychart.com/geodata/1.2.0/countries/{{page.country}}/{{page.country}}.js"></script>
+  {% else %}
+    <script src="https://cdn.anychart.com/geodata/1.2.0/custom/world/world.js"></script>
   {% endif %}
   {% if page.journey %}
     {% assign journey = site.data.journeys[page.journey] %}
@@ -122,7 +124,6 @@
     <script>
       window.sohobase = {{journey | jsonify}};
     </script>
-
   {% endif %}
 
   <!--  App -->
