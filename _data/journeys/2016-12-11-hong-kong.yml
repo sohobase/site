@@ -1,41 +1,27 @@
 country: hong_kong_s.a.r.
 cities:
-  - name: Hong Kong Island
-    lat: 22.244476
-    long: 114.151046
-  - name: HK International airport (HKG)
-    lat: 22.308047
-    long: 113.916292
+  - name: Hong Kong
+    point: [22.244476, 114.151046]
 
-  # - name: Hotel
-  #   lat: 22.3175298
-  #   long: 113.98083
+pois:
+  - name: HK International airport (HKG)
+    point: [22.308047, 113.916292]
+  - name: Hotel
+    point: [22.3175298, 113.98083]
 
 journey:
-
-  air:
-    - number: 1
-      points: [18.767749, 98.961820, 22.308047, 113.916292]
-      short: From Chiang Mai (CNX) to Hong Kong (HKG)
-      full: On our way to Bristol we stopped in Southampton\nand enjoyed the dinner at restaurant.
-      curvature: 0.25
+  arrive:
+    type: air
+    route:
+      - name: From Chiang Mai (CNX) to Hong Kong (HKG)
+        description: On our way to Bristol we stopped in Southampton\nand enjoyed the dinner at restaurant.
+        points: [18.767749, 98.961820, 22.308047, 113.916292]
 
   train:
-    - number: 2
-      points: [22.308047, 113.916292,  22.3175298, 113.98083]
-      short: From Airport to Central
-      full: The road to Liverpool took just couple of hours,\nso we had plenty time to walk around in Liverpool.
-
-  car:
-    - number: 2
-      points: [53.474881, -2.249000, 53.403105, -2.999768]
-      short: From Manchester to Liverpool
-      full: The road to Liverpool took just couple of hours,\nso we had plenty time to walk around in Liverpool.
-
-
-  ship:
-    - number: 3
-      points: [53.403105, -2.999768, 53.812012, -3.053354, 54.151732, -4.486070, 54.614223, -5.912609]
-      short: From Liverpool to Belfast by boat
-      full: To get from Liverpool to Belfast, we got tickets on a cruise ship.\nThe route of the cruise ship went through Blackpool and Douglas\nand took 3 days.
-      curvature: 0
+    type: train
+    color: '#f00'
+    route:
+      - name: From Airport to Central
+        description: The road to Liverpool took just couple of hours,\nso we had plenty time to walk around in Liverpool.
+        points: [22.308047, 113.916292,  22.3175298, 113.98083]
+        curvature: 0

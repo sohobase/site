@@ -1,7 +1,7 @@
 
 # SEO settings
-title: "sohobase"
-title2: "ltd" # default: ""
+title: sinbase
+title2: "" # default: ""
 description: "Just another minimalist Jekyll theme that focuses on technical writing."
 keywords: "Jekyll, theme, free, download, SEO, blog, web, minimalist, thinkspace"
 url: http://sohobase.co # site url

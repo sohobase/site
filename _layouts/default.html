@@ -1,22 +1,18 @@
 ---
 layout: compress
 ---
+
 <!DOCTYPE html>
 <html>
   {% include head.html %}
   <body>
     <main>
-      <div>
-        <div id="app"></div>
-        <div class="map" id="map"></div>
-      </div>
+      <aside id="app"></aside>
       <article>
         {% include header.html %}
         {{ content }}
         {% include footer.html %}
       </article>
-
     </main>
-
   </body>
 </html>

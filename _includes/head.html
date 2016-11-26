@@ -113,21 +113,22 @@
   <!-- anychart -->
   <link rel="stylesheet" href="https://cdn.anychart.com/css/7.12.0/anychart-ui.min.css" />
   <script src="https://cdn.anychart.com/js/7.12.0/anychart-bundle.min.js"></script>
-  {% if page.country %}
-    <script src="http://cdn.anychart.com/geodata/1.2.0/countries/{{page.country}}/{{page.country}}.js"></script>
-  {% else %}
-    <script src="https://cdn.anychart.com/geodata/1.2.0/custom/world/world.js"></script>
-  {% endif %}
+
   {% if page.journey %}
     {% assign journey = site.data.journeys[page.journey] %}
-    <script src="http://cdn.anychart.com/geodata/1.2.0/countries/{{journey.country}}/{{journey.country}}.js"></script>
+
+    {% if journey.country %}
+      <script src="http://cdn.anychart.com/geodata/1.2.0/countries/{{journey.country}}/{{journey.country}}.js"></script>
+    {% else %}
+      <script src="https://cdn.anychart.com/geodata/1.2.0/custom/world/world.js"></script>
+    {% endif %}
     <script>
       window.sohobase = {{journey | jsonify}};
     </script>
   {% endif %}
 
   <!--  App -->
-  <link rel="stylesheet" href="/assets/js/sohobase-site.main.css" />
+  <link rel="stylesheet" href="/assets/js/sohobase-site.css" />
   <script src="/assets/js/sohobase-site.vendor.js"></script>
   <script src="/assets/js/sohobase-site.js"></script>
 </head>
