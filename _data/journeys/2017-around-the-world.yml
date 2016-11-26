@@ -1,76 +1,129 @@
 cities:
+  # -- Europe
   - name: London
-    lat: 51.507351
-    long: -0.127758
+    point: [51.507351, -0.127758]
+  - name: Prague
+    point: [50.075538, 14.437800]
   - name: Bilbao
-    lat: 43.263013
-    long: -2.934985
-  - name: Hong Kong
-    lat: 22.244476
-    long: 114.151046
-  - name: CNX
-    lat: 18.767749
-    long: 98.961820
-  - name: Bogota
-    lat: 4.710989
-    long: -74.072092
-  - name: New York
-    lat: 40.712784
-    long: -74.005941
-  - name: Sidney
-    lat: -33.868820
-    long: 151.209296
-  - name: Cuba
-    lat: 21.521757
-    long: -77.781167
-  - name: Santiago de Chile
-    lat: -33.448890
-    long: -70.669265
-  - name: Wellington
-    lat: -41.286460
-    long: 174.776236
+    point: [43.263013, -2.934985]
 
-  - name: Tokio
-    lat: 35.689487
-    long: 139.691706
-  - name: Colombo
-    lat: 6.927079
-    long: 79.861243
-  - name: Bali
-    lat: -8.409518
-    long: 115.188916
-  - name: Hawai
-    lat: 19.896766
-    long: -155.582782
-  - name: Mexico DF
-    lat: 19.246470
-    long: -99.101350
-  - name: Vancouver
-    lat: 45.638728
-    long: -122.661486
-  - name: Toronto
-    lat: 43.653226
-    long: -79.383184
-  - name: Cape Town
-    lat: -33.924869
-    long: 18.424055
+  # -- Africa
   - name: Marrakech
-    lat: 31.629472
-    long: -7.981084
-  - name: Zagora
-    lat: 30.345900
-    long: -5.840659
+    point: [31.629472, -7.981084]
+  - name: Cape Town
+    point: [-33.924869, 18.424055]
+  - name: Cairo
+    point: [30.044420, 31.235712]
 
+  # -- Asia
+  - name: Colombo
+    point: [6.927079, 79.861243]
+  - name: Chiang Mai
+    point: [18.767749, 98.961820]
+  # - name: Hong Kong
+  #   point: [22.244476, 114.151046]
+  - name: Tokio
+    point: [35.689487, 139.691706]
+  - name: Bali
+    point: [-8.409518, 115.188916]
+  - name: Bangkok
+    point: [13.756331, 100.501765]
+  - name: Kuala Lumpur
+    point: [3.139003, 101.686855]
+
+
+  # -- Oceania
+  - name: Sidney
+    point: [-33.868820, 151.209296]
+  - name: Wellington
+    point: [-41.286460, 174.776236]
+
+  # -- America
+  - name: Santiago de Chile
+    point: [-33.448890, -70.669265]
+    position: left
+  - name: Bogota
+    point: [4.710989, -74.072092]
+  # - name: Cuba
+  #   point: [21.521757, -77.781167]
+  - name: New York
+    point: [40.712784, -74.005941]
+  - name: Toronto
+    point: [43.653226, -79.383184]
+  # - name: Hawai
+  #   point: [19.896766, -155.582782]
+  # - name: Mexico DF
+  #   point: [19.246470, 99.101350]
+  # - name: Vancouver
+  #   point: [45.638728, -122.661486]
 
 journey:
-  air:
-    # - number: 1
-    #   points: [18.767749, 98.961820, 22.308047, 113.916292]
-    #   short: From Chiang Mai (CNX) to Hong Kong (HKG)
-    #   full: On our way to Bristol we stopped in Southampton\nand enjoyed the dinner at restaurant.
-    #   curvature: 0.25
+  route:
+    - number: 1
+      points: [18.767749, 98.961820, 35.689487, 139.691706]
+      short: Chiang Mai (CNX) to Tokio (JAP)
+      full: lorem ipsum
+      curvature: 0.25
+    - number: 2
+      points: [35.689487, 139.691706, -8.409518, 115.188916]
+      short: Tokio (JAP) to Bali (IND)
+      curvature: 0.25
+    - number: 3
+      points: [-8.409518, 115.188916, -33.868820, 151.209296]
+      short: Bali (IND) to Sidney (AUS)
+      curvature: 0.25
+    - number: 4
+      points: [-33.868820, 151.209296, -41.286460, 174.776236]
+      short: Sidney (AUS) to Wellington (NZ)
+      curvature: 0.25
+    - number: 5
+      points: [-41.286460, 174.776236, -33.448890, -70.669265]
+      short: Wellington (NZ) to Santiago de Chile (CH)
+      curvature: -0.25
+    - number: 6
+      points: [-33.448890, -70.669265, 4.710989, -74.072092]
+      short: santiago de Chile (CH) to Bogota (COL)
+      curvature: -0.25
+    - number: 7
+      points: [4.710989, -74.072092, 40.712784, -74.005941]
+      short: Bogota (COL) to New York (US)
+      curvature: 0.25
+    - number: 8
+      points: [40.712784, -74.005941, 51.507351, -0.127758]
+      short: New York (US) to London (UK)
+      curvature: 0.25
+    - number: 9
+      points: [51.507351, -0.127758, 43.263013, -2.934985]
+      short: London (UK) to Bilbao (ES)
+      curvature: 0.25
+    - number: 10
+      points: [43.263013, -2.934985, 31.629472, -7.981084]
+      short: Bilbao (ES) to Marrakech (MAR)
+      curvature: 0.25
+    - number: 11
+      points: [31.629472, -7.981084, -33.924869, 18.424055]
+      short: Marrakech (MAR) to Cape Town (SOU)
+      curvature: 0.25
+    - number: 12
+      points: [-33.924869, 18.424055, 6.927079, 79.861243]
+      short: Cape Town (SOU) to Colombo ()
+      curvature: 0.25
+    - number: 13
+      points: [6.927079, 79.861243, 18.767749, 98.961820]
+      short: Colombo () to Chiang Mai (CNX)
+      curvature: 0.25
 
-  train:
+  alternative:
+    - number: 6
+      points: [-33.448890, -70.669265, -33.924869, 18.424055, 40.712784, -74.005941]
+      short: santiago de Chile >> Cape Town >> New York
+      curvature: -0.25
+
+  alternative-2:
+    - number: 6
+      points: [43.263013, -2.934985, 30.044420, 31.235712, 6.927079, 79.861243]
+      short: Bilbao >> Cairo >> Colombo
+      curvature: -0.25
 
   car:
 

@@ -26,6 +26,10 @@ class Map extends Component {
     const { cities = [], country, journey = {} } = window.sohobase;
     const map = anychart.connector();
 
+    anychart.theme({
+      map: { unboundRegions: {enabled: true, fill: '#E1E1E1', stroke: '#D2D2D2'} },
+    });
+
     map.geoData(anychart.maps[country || 'world']);
     map.interactivity().selectionMode('none');
 
@@ -42,6 +46,9 @@ class Map extends Component {
           // .stroke('2 ' + color)
           // .hoverStroke('1.5 #212121')
           .name(key)
+          .markers({})
+          // .markers({position: '100%', size: 5, type: 'circle'})
+          // .hoverMarkers({position: '100%',  size: 4,  fill: '#455a64', stroke: '2 #455a64', type: 'circle'})
           .curvature(0);
         // connectorSeries.legendItem({ iconType: 'circle', fill: color, iconStroke: '2 #E1E1E1' });
 
@@ -57,21 +64,28 @@ class Map extends Component {
       }
     });
 
-    map.marker(cities)
+    const c = cities.map(city => {
+      const { name, point, position = 'bottom' } = city;
+      return { name, lat: point[0], long: point[1], position };
+    });
+    map.marker(c)
       .type('circle')
-      .size(4)
+      .size(3)
       .fill('#b69853')
-      .stroke('2 #fff')
+      .stroke('1 #fff')
+      // .hoverStroke('2 #f00')
+      .hoverSize(8)
+      // .selectionMode("none")
       .legendItem(null)
       .labels()
         .enabled(true)
-        // .position('bottom')
+        .position('bottom')
         .fontSize(10)
         .fontWeight('bold')
         // .fontColor('rgba(51, 51, 51, 0.8)')
-        // .offsetY(0)
-        // .offsetX(5)
-        // .anchor('left');
+        .offsetY(-2)
+        .offsetX(4)
+        .anchor('left');
 
     map.legend().enabled(true).padding([0, 0, 20, 0]);
 
