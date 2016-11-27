@@ -1,0 +1,23 @@
+country: spain
+cities:
+  - name: Madrid
+    point: [40.4378698, -3.819619]
+  - name: Bilbao
+    point: [43.263013, -2.934985]
+
+journey:
+  air:
+    type: air
+    route:
+      - name: From Chiang Mai (CNX) - Hong Kong (HKG)
+        points: [18.767749, 98.961820, 40.4378698, -3.819619]
+        description: On our way to Bristol we stopped in Southampton\nand enjoyed the dinner at restaurant.
+        curvature: 0.1
+
+  bus:
+    type: bus
+    route:
+      - name:  Madrid 🇹🇭 - Bilbao 🇪🇸
+        points: [40.4378698, -3.819619, 43.263013, -2.934985]
+        description: The road to Liverpool took just couple of hours,\nso we had plenty time to walk around in Liverpool.
+        curvature: 0

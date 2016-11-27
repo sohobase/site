@@ -1,0 +1,19 @@
+country: japan
+legend: false
+cities:
+  - name: Osaka
+    point: [34.693738, 135.502165]
+
+pois:
+  - name: Tokio
+    point: [35.689487, 139.691706]
+  # - name: Kyoto
+  #   point: [35.011636, 135.768029]
+
+journey:
+  arrive:
+    type: air
+    route:
+      - name: From Chiang Mai (CNX) to Hong Kong (HKG)
+        description: On our way to Bristol we stopped in Southampton\nand enjoyed the dinner at restaurant.
+        points: [18.767749, 98.961820, 34.693738, 135.502165]

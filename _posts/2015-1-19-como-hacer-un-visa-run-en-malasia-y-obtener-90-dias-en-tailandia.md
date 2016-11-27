@@ -2,11 +2,9 @@
 layout:     post
 title:      ¿Cómo hacer un Visa Run en Malasia y obtener 90 días en Tailandia?
 date:       2015-1-19
-where:      Kuala Lumpur - Malasia
-tag:        travel
-cover:      petronas_towers.jpg
-permalink:  /blog/como-hacer-un-visa-run-en-malasia-y-obtener-90-dias-en-tailandia
-published:  true
+tag:        asia
+
+journey: 2015-01-19-malaysia
 ---
 Cuando emprendes una aventura como la mía sin saber cuando regresarás a tu origen tienes que estar preparado para cualquier tipo de contratiempo. En mi caso lo que ha sucedido es que a pesar de que el plan establecido era pasar cerca de 2 meses en la isla indonesia de Bali, me ha sido imposible porque no me ha gustado en absoluto. De todas formas este texto no va a justificar porqué solo he aguantado apenas 8 días en Indonesia sino de intentar explicar como vencer a la adversidad y buscar una solución. En mi caso lo tenía claro quería volver a Tailandia, **quería volver a Chiang Mai y pasar una larga estancia antes de que llegase la temida [Burning Season](http://www.chiangmaicitynews.com/news.php?id=1565)**.
 

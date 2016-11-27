@@ -8,6 +8,10 @@ pois:
     point: [22.308047, 113.916292]
   - name: Hotel
     point: [22.3175298, 113.98083]
+  - name:  Wan Chai Ferry Pier
+    point: [22.2983829, 114.1411738]
+  - name: Star Ferry Pier Tsim Sha Tsui
+    point: [22.2983829, 114.1411738]
 
 journey:
   arrive:
@@ -19,7 +23,14 @@ journey:
 
   train:
     type: train
-    color: '#f00'
+    route:
+      - name: From Airport to Central
+        description: The road to Liverpool took just couple of hours,\nso we had plenty time to walk around in Liverpool.
+        points: [22.308047, 113.916292,  22.3175298, 113.98083]
+        curvature: 0
+
+  train:
+    type: ship
     route:
       - name: From Airport to Central
         description: The road to Liverpool took just couple of hours,\nso we had plenty time to walk around in Liverpool.

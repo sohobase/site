@@ -9,12 +9,10 @@ class Map extends Component {
   static propTypes = {
     cities: PropTypes.array,
     journey: PropTypes.array,
-    legend: PropTypes.bool,
   };
 
   static defaultProps = {
     journey: [],
-    legend: false,
   };
 
   constructor(props) {
@@ -25,16 +23,54 @@ class Map extends Component {
 
   // -- Lifecycle
   componentDidMount() {
-    const { cities = [], country, journey = {}, pois = [] } = window.sohobase;
-    // anychart.theme({
-    //   map: {
-    //     unboundRegions: { enabled: true, fill: '#f9f9f9', stroke: '#D2D2D2' },
-    //   },
-    // });
+    const {
+      cities = [],
+      country = 'world',
+      journey = {},
+      legend = true,
+      pois = []
+    } = window.sohobase;
+
+    anychart.theme({
+      map: {
+        unboundRegions: { enabled: true, fill: '#f9f9f9', stroke: '#e9e9e9' },
+      },
+    });
 
     const map = anychart.connector();
-    map.geoData(anychart.maps[country || 'world']);
+    map.geoData(anychart.maps[country]);
     map.interactivity().selectionMode('none');
+
+    map.marker(cities.map(city => ({ name: city.name, lat: city.point[0], long: city.point[1] })))
+      .type('circle')
+      .size(5)
+      .fill(Colors.accent)
+      .stroke('2 #fff')
+      // .hoverStroke('2 #f00')
+      .hoverSize(8)
+      .selectionMode("none")
+      .legendItem(null)
+      .labels()
+        .position('bottom')
+        .fontSize(10)
+        .fontWeight('bold')
+        // .fontColor('rgba(51, 51, 51, 0.8)')
+        .offsetY(-2)
+        .offsetX(4)
+        .anchor('left');
+
+    map.marker(pois.map(poi => ({ name: poi.name, lat: poi.point[0], long: poi.point[1] })))
+      .type('circle')
+      .size(3)
+      .fill(Colors.secondary)
+      .stroke('1 #fff')
+      .legendItem(null)
+      // .legendItem({ iconType: 'circle', iconSize: 8 })
+      .labels()
+        .position('bottom')
+        .offsetY(-1)
+        .fontSize(9)
+        .anchor('right');
 
     Object.keys(journey).map(key => {
       const { color = Colors.accent, route, type = 'air' } = journey[key] || {};
@@ -58,39 +94,7 @@ class Map extends Component {
       }
     });
 
-    map.marker(cities.map(city => ({ name: city.name, lat: city.point[0], long: city.point[1] })))
-      .type('circle')
-      // .size(5)
-      .fill(Colors.accent)
-      .stroke('1 #fff')
-      // .hoverStroke('2 #f00')
-      .hoverSize(8)
-      // .selectionMode("none")
-      .legendItem(null)
-      .labels()
-        .position('bottom')
-        .fontSize(10)
-        .fontWeight('bold')
-        // .fontColor('rgba(51, 51, 51, 0.8)')
-        .offsetY(-2)
-        .offsetX(4)
-        .anchor('left');
-
-
-    map.marker(pois.map(poi => ({ name: poi.name, lat: poi.point[0], long: poi.point[1] })))
-      .type('circle')
-      .size(3)
-      .fill(Colors.secondary)
-      .stroke('1 #fff')
-      .legendItem(null)
-      // .legendItem({ iconType: 'circle', iconSize: 8 })
-      .labels()
-        .position('bottom')
-        .offsetY(-1)
-        .fontSize(9)
-        .anchor('right');
-
-    map.legend().enabled(true).padding([0, 0, 20, 0]);
+    map.legend().enabled(legend);
 
     map.container('map');
     map.draw();

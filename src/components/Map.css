@@ -1,10 +1,14 @@
 .map {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 90%;
+  height: 96%;
+  width: 96%;
 
-  .anychart-credits {
+  & .anychart-credits {
     display: none;
   }
+}
+
+.anychart-credits {
+  display: none;
 }

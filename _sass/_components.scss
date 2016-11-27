@@ -24,6 +24,7 @@
     }
 
     .date {
+      min-width: $unit * 6.4;
       margin-left: $offset;
     }
   }
@@ -34,6 +35,7 @@
   border: 1px solid $light-gray-color;
   padding: ($offset / 10) ($offset / 4);
   text-transform: uppercase;
+  text-align: center;
   font-size: $font-size-small;
   letter-spacing: 1px;
   color: $secondary-color;

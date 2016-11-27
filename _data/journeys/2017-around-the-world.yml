@@ -78,18 +78,36 @@ journey:
         points: [-41.286460, 174.776236, -33.448890, -70.669265]
         curvature: -0.25
 
+      - name: 🇺🇸 New York - 🇬🇧 London
+        points: [40.712784, -74.005941, 51.507351, -0.127758]
+
+      - name: 🇬🇧 London - 🇪🇸 Bilbao
+        points: [51.507351, -0.127758, 43.263013, -2.934985]
+
+      - name: 🇱🇰 Colombo - 🇹🇭 Chiang Mai
+        points: [6.927079, 79.861243, 18.767749, 98.961820]
+
+  alternative-1:
+    type: air
+    color: '#f00'
+    route:
+      - name: 🇨🇱 santiago de Chile > 🇿🇦 Cape Town > 🇺🇸 New York
+        points: [-33.448890, -70.669265, -33.924869, 18.424055, 40.712784, -74.005941]
+        curvature: -0.25
+      - name: 🇪🇸 Bilbao > 🇪🇬 Cairo > 🇱🇰 Colombo
+        points: [43.263013, -2.934985, 30.044420, 31.235712, 6.927079, 79.861243]
+        curvature: -0.25
+
+  alternative-2:
+    type: air
+    color: '#00f'
+    route:
       - name: 🇨🇱 Santiago de Chile  - 🇨🇴 Bogota
         points: [-33.448890, -70.669265, 4.710989, -74.072092]
         curvature: -0.25
 
       - name: 🇨🇴 Bogota - 🇺🇸 New York
         points: [4.710989, -74.072092, 40.712784, -74.005941]
-
-      - name: 🇺🇸 New York - 🇬🇧 London
-        points: [40.712784, -74.005941, 51.507351, -0.127758]
-
-      - name: 🇬🇧 London - 🇪🇸 Bilbao
-        points: [51.507351, -0.127758, 43.263013, -2.934985]
 
       - name: 🇪🇸 Bilbao - 🇲🇦 Marrakech
         points: [43.263013, -2.934985, 31.629472, -7.981084]
@@ -99,26 +117,3 @@ journey:
 
       - name: 🇿🇦 Cape Town  - 🇱🇰 Colombo
         points: [-33.924869, 18.424055, 6.927079, 79.861243]
-
-      - name: 🇱🇰 Colombo - 🇹🇭 Chiang Mai
-        points: [6.927079, 79.861243, 18.767749, 98.961820]
-
-  alternative:
-    type: air
-    color: '#f00'
-    route:
-      - name: 🇨🇱 santiago de Chile > 🇿🇦 Cape Town > 🇺🇸 New York
-        points: [-33.448890, -70.669265, -33.924869, 18.424055, 40.712784, -74.005941]
-        curvature: -0.25
-
-  alternative-2:
-    type: air
-    color: '#f00'
-    route:
-      - name: 🇪🇸 Bilbao > 🇪🇬 Cairo > 🇱🇰 Colombo
-        points: [43.263013, -2.934985, 30.044420, 31.235712, 6.927079, 79.861243]
-        curvature: -0.25
-
-  car:
-
-  ship:
