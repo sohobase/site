@@ -128,7 +128,7 @@
   {% endif %}
 
   <!--  App -->
-  <link rel="stylesheet" href="/assets/js/sohobase-site.css" />
-  <script src="/assets/js/sohobase-site.vendor.js"></script>
-  <script src="/assets/js/sohobase-site.js"></script>
+  <link rel="stylesheet" href="{{ "/assets/js/sohobase-site.css" | prepend: site.baseurl }}" />
+  <script src="{{ "/assets/js/sohobase-site.vendor.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/assets/js/sohobase-site.js" | prepend: site.baseurl }}"></script>
 </head>
