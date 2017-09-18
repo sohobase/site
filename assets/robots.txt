@@ -1,0 +1,3 @@
+# robots.txt for http://sohobase.co/
+
+User-agent: *

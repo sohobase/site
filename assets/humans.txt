@@ -1,0 +1,10 @@
+/* TEAM */
+Name        : Javi Jiménez
+Site        : http://soyjavi.com
+Twitter     : @soyjavi
+Location    : Bilbao, Spain.
+
+/* SITE */
+Last update : 2017/09/18
+Standards   : HTML5, CSS3 & JavaScript.
+Software    : Atom & passion.

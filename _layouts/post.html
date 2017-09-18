@@ -1,19 +1,52 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body data-page="{% if page.layout %}{{ page.layout }}{% else %}{{ site.layout }}{% endif %}">
+    {% include ga.html %}
 
-<article class="post container" itemscope itemtype="http://schema.org/BlogPosting">
-  <header class="post-header">
-    <p>
-      <time class="date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
-      {% if page.author %} • <span class="author">{{ page.author }}</span>{% endif %}
-    </p>
-    <h1 class="post-title" itemprop="title">{{ page.title }}</h1>
-  </header>
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
-    {% include post-share.html %}
-  </div>
-</article>
+    <section>
+      <header style="background-image: url('/assets/images/covers/{{page.cover}}');">
+        <h1>{{ page.title }}</h1>
+        <p>
+          {{ page.date | date: '%B %d, %Y' }}
+          {% if page.where %} - {{ page.where }}{% else %}{{ site.where }}{% endif %}
+        </p>
+        <p></p>
+      </header>
+      <article>
+        {{ content }}
 
-{% include comments.html %}
+        <div class="author">
+          <a href="/">
+            <img src="/assets/images/soyjavi.png" />
+          </a>
+          <div>
+            <a href="/">@soyjavi</a>
+            <small>
+              Doer · A complicated #human who makes stuff · @quojs, @lungojs, #atoms creator · #author · #code lover · #nomad · @tapquo & @zetapath #founder
+            </small>
+          </div>
+        </div>
+      </article>
+
+      <nav class="summary">
+        {% if page.previous %}
+          <a href="{{ page.previous.url }}">
+            <small>Previous</small>
+            <strong>{{ page.previous.title }}</strong>
+          </a>
+        {% endif %}
+
+        {% if page.next %}
+          <a href="{{ page.next.url }}">
+            <small>Next</small>
+            <strong>{{ page.next.title }}</strong>
+          </a>
+        {% endif %}
+      </nav>
+
+    </section>
+    {% include footer.html %}
+    {% include theme.html %}
+  </body>
+</html>

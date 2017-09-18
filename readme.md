@@ -1,7 +1,4 @@
-# sinbase
+site
+====
 
-### Screenshot
-
-### License
-
-[MIT](LICENSE.md)
+Personal site
