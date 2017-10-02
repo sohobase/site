@@ -90,16 +90,8 @@ a {
   img {
     max-width: 90%;
   }
-  h1 {
-    font-size: 3.8 * $unit;
-    line-height: 1;
-  }
   strong {
-    margin: ($unit / 2) 0 ($offset / 2) 0 ;
-    opacity: .9;
-  }
-  p {
-    font-size: $font-size-small;
+    margin: ($unit / 2) 0 0 0 ;
     color: $text-secondary;
   }
 }
@@ -173,6 +165,9 @@ h3, .text-secondary {
     .title.fixed {
       position: fixed;
       width: $title-fixed-width;
+      & > strong {
+        padding-right: $offset;
+      }
     }
   }
 }
@@ -189,15 +184,17 @@ h3, .text-secondary {
     h2 {
       font-size: 1.95 * $unit;
     }
-    .title.fixed {
-      border-bottom: solid 1px $background-dark;
-      > p {
-        display: none;
+
+    .title {
+      img { max-width: 70%; }
+
+      &.fixed {
+        border-bottom: solid 1px $background-dark;
+        > p { display: none; }
       }
     }
-    > footer {
-      padding-left: $offset-mobile;
-    }
+
+    > footer { padding-left: $offset-mobile; }
   }
 }
 
