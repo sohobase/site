@@ -32,6 +32,9 @@ $font-text-shadow: 0 ($unit / 10) ($unit / 20) rgba(0,0,0,.1);
 // Layout
 $title-fixed-width: 220px;
 $footer-height: $offset;
+$button-shadow: 5px 5px 30px rgba(0,0,0,0.5);
+// Transition
+$transition-duration: 450ms;
 
  // Page
 @import "page";
@@ -41,6 +44,7 @@ $footer-height: $offset;
 @import "page.newsletter";
 @import "page.post";
 @import "page.resume";
+@import "page.roles";
 
 // Common
 @import "icons";

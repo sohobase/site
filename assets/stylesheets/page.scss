@@ -80,11 +80,18 @@ p {
 
 a {
   text-decoration: none;
-  &:not(.icon) {
+  &:not(.icon):not([data-role='button']) {
     font-style: italic;
     color: $accent;
   }
 }
+
+[data-role='slack'] {
+  position: fixed;
+  top: $offset;
+  right: $offset;
+}
+
 
 .title {
   img {

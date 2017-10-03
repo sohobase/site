@@ -1,0 +1,36 @@
+[data-role='slack'] { position: fixed; }
+
+[data-role='button'] {
+  border-radius: $offset;
+  box-shadow: $button-shadow;
+  font-family: $font-family-secondary;
+  font-size: $font-size-small;
+  font-weight: $font-weight-bold;
+  font-style: inherit;
+  line-height: $font-size-small;
+  padding: $unit ($unit * 2);
+  text-transform: uppercase;
+  transition: background $transition-duration;
+
+  &.accent {
+    background-color: $accent;
+    color: white;
+
+    &:hover { background-color: darken($accent, 10%); }
+  }
+}
+
+@media all and (max-width: 768px) {
+  [data-role='slack'] {
+    top: auto;
+    bottom: $offset-mobile;
+    right: $offset-mobile;
+  }
+}
+
+@media all and (min-width: 769px) {
+  [data-role='slack'] {
+    top: $offset;
+    right: $offset;
+  }
+}
