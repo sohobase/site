@@ -8,8 +8,9 @@
     </section>
     {% if page.type != 'landing' %}
       {% include footer.html %}
+    {% else %}
+      {% include particles.html %}
     {% endif %}
-
     {% include theme.html %}
   </body>
 </html>
