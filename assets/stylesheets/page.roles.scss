@@ -1,4 +1,16 @@
-[data-role='slack'] { position: fixed; }
+[data-role='banner'] {
+  display: block;
+  margin: 0 auto;
+  width: 75%;
+  height: $unit * 9.6;
+  margin-bottom: $unit;
+  text-align: center;
+  text-decoration: none;
+
+  &.coinbase {
+    background: blue;
+  }
+}
 
 [data-role='button'] {
   border-radius: $offset;
@@ -20,10 +32,13 @@
   }
 }
 
+[data-role='slack'] {
+  position: fixed;
+}
+
 @media all and (max-width: 768px) {
   [data-role='slack'] {
-    top: auto;
-    bottom: $offset-mobile;
+    top: $offset-mobile;
     right: $offset-mobile;
   }
 }

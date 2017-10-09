@@ -14,6 +14,8 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: $text-contrast;
+  background-color: $background-contrast;
 
   > img {
     opacity: 0;
@@ -30,32 +32,15 @@ body {
     height: $footer-height;
     line-height: $footer-height;
     border-top: solid 1px;
+    background-color: $background-contrast;
+    border-top-color: $background-contrast-dark;
 
     > .navigation {
       max-width: 960px;
       margin: 0 auto;
     }
   }
-
-  &:not(.night) {
-    color: $text;
-    background-color: $background;
-    > footer {
-      background-color: $background;
-      border-top-color: $background-dark;
-    }
-  }
-
-  &.night {
-    color: $text-contrast;
-    background-color: $background-contrast;
-    > footer {
-      background-color: $background-contrast;
-      border-top-color: $background-contrast-dark;
-    }
-  }
 }
-
 
 h1, h2 {
   margin: 0;
@@ -82,17 +67,10 @@ p {
 a {
   text-decoration: none;
   &:not(.icon):not([data-role='button']) {
-    font-style: italic;
+    // font-style: italic;
     color: $accent;
   }
 }
-
-[data-role='slack'] {
-  position: fixed;
-  top: $offset;
-  right: $offset;
-}
-
 
 .title {
   img {
@@ -107,10 +85,10 @@ a {
 .navigation {
   display: flex;
   align-items: center;
-  font-size: $font-size-small;
+  // font-size: $font-size-small;
   > * {
     &:not(:first-child) {
-      margin-left: $offset / 4;
+      margin-left: $offset / 3;
     }
     &.icon {
       font-size: $font-size;
