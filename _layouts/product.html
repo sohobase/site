@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body data-page="{{ page.layout }}" data-app="{{ page.title }}">
+    {% include ga.html %}
+
+    <header class='wrapper'>
+      <nav data-component-navigation>
+        <a href='/'>
+          <img src='/assets/images/sohobase-brandname-white.png' class='logo' />
+        </a>
+        <a href='/xcryptos' class='product {% if page.title == "xCryptos" %}active{% endif %}'>xCryptos</a>
+        <a href='/splitwallet' class='product {% if page.title == "Splitwallet" %}active{% endif %}'>Splitwallet</a>
+        <a href='/coinapi' class='product {% if page.title == "CoinAPI" %}active{% endif %}'>CoinAPI</a>
+      </nav>
+      {% include component-slack.html %}
+    </header>
+    {% include component-particles.html %}
+    <section class='wrapper'>
+      {% if page.thumbnail %}
+        <div>
+          <img src='/assets/images/{{page.thumbnail}}'/>
+        </div>
+      {% endif %}
+      <div class='{% if !page.thumbnail %}standalone{% endif %}'>
+        <h1>{{page.title}}</h1>
+        <strong>{{page.description}}</strong>
+        <p>{{ content }}</p>
+        <div data-role-markets>
+          {% if page.android %}
+            <a data-component-button class='large' href={{page.android}}>
+              <span class='icon android'></span>
+              <span>Android</span>
+            </a>
+          {% endif %}
+          {% if page.ios %}
+            <a data-component-button class='large' href={{page.ios}}>
+              <span class='icon apple'></span>
+              <span>iPhone</span>
+            </a>
+          {% endif %}
+          {% if page.beta %}
+            <a data-component-button class='large' href={{page.beta}}>
+              <span class='icon product-hunt'></span>
+              <span>Get early access</span>
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class='wrapper'>
+        {% include title.html %}
+        {% include navigation.html %}
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+[data-page='product'] {
+
+  &[data-app="xCryptos"] { background: linear-gradient(135deg, $color-xcryptos-primary, $color-xcryptos-accent); }
+  &[data-app="Splitwallet"] { background: linear-gradient(135deg, $dark, $color-xcryptos-accent); }
+  &[data-app="CoinAPI"] { background: linear-gradient(135deg, $dark, red); }
+
+  .wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  > header {
+    align-items: center;
+    display: flex;
+    left: 0;
+    padding: $unit;
+    position: fixed;
+    right: 0;
+    z-index: 2;
+
+    .logo { height: $font-size-extra-large; }
+    [data-component-navigation] > :not(:first-child):not(.active) { opacity: 0.5; }
+  }
+
+  > .particles {
+    opacity: 0.5;
+    position: absolute;
+  }
+
+  > section {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+
+    > div {
+      margin-top: $offset;
+      padding: $offset;
+      width: 50%;
+      z-index: 1;
+    }
+
+    img { width: 93%; }
+    h1, strong { font-weight: $font-weight-bold; }
+    h1 { font-size: $unit * 4.8; }
+    strong { font-size: $font-size-large; }
+    p {
+      opacity: 0.75;
+      margin: $unit 0;
+      font-size: $font-size-small;
+    }
+
+    [data-role-markets] {
+      align-items: center;
+      align-content: center;
+      display: flex;
+      justify-content: center;
+      padding-top: $unit;
+    }
+  }
+
+  > footer {
+    padding: $unit * 2 0;
+    // min-height: $unit * 12.8;
+    background: $white;
+
+    .wrapper {
+      display: flex;
+      align-items: center;
+      align-content: center;
+    }
+
+    .title {
+      img {
+        height: $font-size-extra-large;
+      }
+    }
+    [data-component-navigation] {
+      justify-content: flex-end;
+      > * { color: $text; }
+    }
+  }
+}

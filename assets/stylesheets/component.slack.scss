@@ -1,0 +1,18 @@
+
+[data-component-slack] {
+  // position: fixed;
+}
+
+@media all and (max-width: 768px) {
+  [data-component='slack'] {
+    top: $offset-mobile;
+    right: $offset-mobile;
+  }
+}
+
+@media all and (min-width: 769px) {
+  [data-component='slack'] {
+    top: $offset;
+    right: $offset;
+  }
+}

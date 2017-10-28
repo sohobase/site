@@ -14,21 +14,23 @@ $background-contrast: #222;
 $background-contrast-dark: lighten($background-contrast, 5%);
 $text: #222;
 $text-contrast: #fafafa;
-$text-secondary: #9ca3ad;
 $accent: #b69853;
+$text-secondary: $accent;
 $dark: #3d3e41;
 $white: #fff;
 $black: #000;
+$color-xcryptos-primary: #AD86FF;
+$color-xcryptos-accent: #3920F5;
 // Font
-$font-family: 'Merriweather', serif;
-// $font-family-secondary: 'Merriweather', serif;
-$font-family-secondary: 'Lato', sans-serif;
+$font-family: -apple-system, BlinkMacSystemFont, 'Helvetica', 'Segoe', sans-serif;
 $font-size-tiny: 1 * $unit;
 $font-size-small: 1.4 * $unit;
 $font-size: 1.6 * $unit;
+$font-size-large: 2.0 * $unit;
+$font-size-extra-large: 2.4 * $unit;
 $font-size-post: 1.9 * $unit;
-$font-weight-normal: 300;
-$font-weight-bold: 900;
+$font-weight-normal: 400;
+$font-weight-bold: 800;
 $font-text-shadow: 0 ($unit / 10) ($unit / 20) rgba(0,0,0,.1);
 // Layout
 $title-fixed-width: 220px;
@@ -41,11 +43,15 @@ $transition-duration: 450ms;
 @import "page";
 @import "page.landing";
 @import "page.blog";
-@import "page.drift";
-@import "page.newsletter";
 @import "page.post";
+@import "page.product";
 @import "page.resume";
-@import "page.roles";
+
+@import "component.banner";
+@import "component.button";
+@import "component.drift";
+@import "component.navigation";
+@import "component.slack";
 
 // Common
 @import "icons";

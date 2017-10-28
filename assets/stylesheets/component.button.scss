@@ -1,0 +1,30 @@
+[data-component-button] {
+  align-items: center;
+  border-radius: $offset;
+  box-shadow: inset 0 0 0 2px$white;
+  color:$white;
+  display: flex;
+  font-size: $font-size-small;
+  font-weight: $font-weight-bold;
+  font-style: inherit;
+  line-height: $font-size-small;
+  padding: $unit ($unit * 2);
+
+  > span {
+    color:$white;
+    &.icon {
+      font-size: 115%;
+      margin-right: $unit / 2;
+    }
+  }
+
+  &.large {
+    font-size: $font-size;
+    padding: $unit * 2 $unit * 4;
+    > span.icon { margin-right: $unit; }
+  }
+
+  &:hover { background-color: rgba(255,255,255,0.5); }
+
+  + [data-component-button] { margin-left: $unit; }
+}

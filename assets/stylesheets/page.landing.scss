@@ -1,16 +1,32 @@
 [data-page='landing'] {
+  [data-component-slack] { position: fixed; }
+
   > section {
+    align-items: flex-end;
+    bottom: $offset;
+    display: flex;
+    flex-wrap: wrap;
+    left: $offset;
     position: absolute;
     right: $offset;
-    bottom: $offset;
-    left: $offset;
-    display: flex;
-    align-items: flex-end;
-    padding-bottom: 0;
+    > * { flex-grow: 1; }
+    > [data-component-navigation] > *:not(:hover) { opacity: 0.75; }
+  }
+}
 
-    flex-wrap: wrap;
-    > * {
-      flex-grow: 1;
+
+@media all and (max-width: 768px) {
+  [data-page='landing'] {
+    > section {
+      right: $offset-mobile;
+      bottom: $offset-mobile;
+      left: $offset-mobile;
+      > [data-component-navigation] { margin-top: $offset-mobile; }
+    }
+
+    [data-component-slack] {
+      top: $offset-mobile;
+      right: $offset-mobile;
     }
   }
 }
@@ -24,24 +40,16 @@
         min-width: $title-min-width;
         max-width: $title-max-width;
       }
-      > .navigation {
+      > [data-component-navigation] {
         margin-right: $unit * 4;
         align-content: flex-end;
         justify-content: flex-end;
       }
     }
   }
-}
 
-@media all and (max-width: 768px) {
-  [data-page='landing'] {
-    > section {
-      right: $offset-mobile;
-      bottom: $offset-mobile;
-      left: $offset-mobile;
-      > .navigation {
-        margin-top: $offset-mobile;
-      }
-    }
+  [data-component-slack] {
+    top: $offset;
+    right: $offset;
   }
 }

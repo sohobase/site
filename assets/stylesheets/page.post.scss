@@ -149,7 +149,7 @@ $post-header-padding: $offset;
     background: none !important;
   }
   > a {
-    &, & > img {
+    &, > img {
       width: $offset;
       height: $offset;
     }

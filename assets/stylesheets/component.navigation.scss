@@ -1,0 +1,16 @@
+[data-component-navigation] {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  font-size: $font-size-small;
+  font-weight: $font-weight-bold;
+  padding: $unit 0;
+
+  > * {
+    color: $white;
+    margin-right: $unit * 2;
+    &.icon { font-size: $font-size-large; }
+    &:hover { opacity: 1; }
+  }
+
+}

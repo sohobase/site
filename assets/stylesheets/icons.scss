@@ -20,19 +20,14 @@
 }
 
 .icon {
-  &.linkedin:before {
-      content: "\e903";
-  }
-  &.email:before {
-      content: "\e900";
-  }
-  &.twitter:before {
-      content: "\e901";
-  }
-  &.github:before {
-      content: "\e902";
-  }
-  &.vcard:before {
-    content: "\e904";
-  }
+  &.slack:before { content: "\e900"; }
+  &.twitter:before { content: "\e901"; }
+  &.lock:before { content: "\e902"; }
+  &.apple:before { content: "\e903"; }
+  &.android:before { content: "\e904"; }
+  &.email:before { content: "\e905"; }
+  &.facebook:before { content: "\e906"; }
+  &.github:before { content: "\e907"; }
+  &.bitcoin:before { content: "\e908"; }
+  &.product-hunt:before { content: "\e909"; }
 }
