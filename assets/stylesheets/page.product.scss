@@ -41,7 +41,7 @@
       z-index: 1;
     }
 
-    img { width: 93%; }
+    img { max-height: 75vh; }
     h1, strong { font-weight: $font-weight-bold; }
     h1 { font-size: $unit * 4.8; }
     strong { font-size: $font-size-large; }
