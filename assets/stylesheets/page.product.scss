@@ -1,7 +1,7 @@
 [data-page='product'] {
 
   &[data-app="xCryptos"] { background: linear-gradient(135deg, $color-xcryptos-primary, $color-xcryptos-accent); }
-  &[data-app="Splitwallet"] { background: linear-gradient(135deg, $dark, $color-xcryptos-accent); }
+  &[data-app="Splitbits"] { background: linear-gradient(135deg, $dark, $color-xcryptos-accent); }
   &[data-app="CoinAPI"] { background: linear-gradient(135deg, $dark, red); }
 
   .wrapper {
