@@ -9,22 +9,21 @@
         <a href='/'>
           <img src='/assets/images/sohobase-brandname-white.png' class='logo' />
         </a>
-        <a href='/xcryptos' class='product {% if page.title == "xCryptos" %}active{% endif %}'>xCryptos</a>
-        <a href='/splitbits' class='product {% if page.title == "Splitbits" %}active{% endif %}'>Splitwallet</a>
-        <a href='/coinapi' class='product {% if page.title == "CoinAPI" %}active{% endif %}'>CoinAPI</a>
       </nav>
       {% include component-slack.html %}
     </header>
     {% include component-particles.html %}
     <section class='wrapper'>
       {% if page.thumbnail %}
-        <div>
-          <img src='/assets/images/{{page.thumbnail}}'/>
-        </div>
+        <img class='app' src='/assets/images/{{page.thumbnail}}'/>
       {% endif %}
       <div class='{% if !page.thumbnail %}standalone{% endif %}'>
-        <h1>{{page.title}}</h1>
-        <strong>{{page.description}}</strong>
+        {% if page.brandname %}
+          <img class='brandname' src='/assets/images/{{page.brandname}}'/>
+        {% else %}
+          <h1>{{page.title}}</h1>
+        {% endif %}
+        <h2>{{page.description}}</h2>
         <p>{{ content }}</p>
         <div data-role-markets>
           {% if page.android %}

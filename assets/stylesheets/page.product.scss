@@ -1,8 +1,8 @@
 [data-page='product'] {
 
   &[data-app="xCryptos"] { background: linear-gradient(135deg, $color-xcryptos-primary, $color-xcryptos-accent); }
-  &[data-app="Splitbits"] { background: linear-gradient(135deg, $dark, $color-xcryptos-accent); }
-  &[data-app="CoinAPI"] { background: linear-gradient(135deg, $dark, red); }
+  &[data-app="Splitbits"] { background: linear-gradient(135deg, $color-splitbits-primary, $color-splitbits-accent); }
+  &[data-app="Koins"] { background: linear-gradient(135deg, $color-koins-primary, $color-koins-accent); }
 
   .wrapper {
     width: 100%;
@@ -14,8 +14,8 @@
     align-items: center;
     display: flex;
     left: 0;
-    padding: $unit;
     position: fixed;
+    height: $unit * 8;
     right: 0;
     z-index: 2;
 
@@ -34,14 +34,15 @@
     height: 100vh;
     justify-content: center;
 
-    > div {
-      margin-top: $offset;
-      padding: $offset;
-      width: 50%;
-      z-index: 1;
-    }
+    > * { z-index: 1; }
+    > div { width: 50%; }
+    > img { max-height: 90%; }
 
-    img { max-height: 75vh; }
+    .brandname {
+      min-height: $unit * 3.6;
+      max-height: $unit * 3.6;
+      display: block;
+    }
     h1, strong { font-weight: $font-weight-bold; }
     h1 { font-size: $unit * 4.8; }
     strong { font-size: $font-size-large; }
@@ -62,8 +63,7 @@
 
   > footer {
     padding: $unit * 2 0;
-    // min-height: $unit * 12.8;
-    background: $white;
+    background: $background-contrast;
 
     .wrapper {
       display: flex;
@@ -78,7 +78,6 @@
     }
     [data-component-navigation] {
       justify-content: flex-end;
-      > * { color: $text; }
     }
   }
 }

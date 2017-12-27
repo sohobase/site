@@ -5,6 +5,7 @@ layout      : product
 title       : xCryptos
 description : Smart Crypto Currencies
 thumbnail   : app-xcryptos.png
+brandname   : brandname-xcryptos.png
 android     : https://play.google.com/store/apps/details?id=com.sohobase.xcryptos
 ---
 

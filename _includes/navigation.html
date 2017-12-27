@@ -3,14 +3,7 @@
   <a href="https://github.com/sohobase" class="icon github" target="_blank"></a>
   <a href="https://twitter.com/sohobase" class="icon twitter" target="_blank"></a>
   <a class="icon email" href="mailto:hi@sohobase.co" target="_blank"></a>
-
-  {% if page.type != "landing" %}
-    <a href='/'>Home</a>
-  {% endif %}
-  <!-- <a href='/about'>About</a> -->
-  <a href='/xcryptos'>Products</a>
-  <a href='mailto:support@sohobase.co'>Support</a>
-  {% if page.type != "blog" %}
-    <!-- <a href="/blog">Blog</a> -->
-  {% endif %}
+  <a href='/xcryptos' class='brandname {% if page.title == "xCryptos" %}active{% endif %}'><img src='/assets/images/brandname-xcryptos.png' /></a>
+  <a href='/splitbits' class='brandname {% if page.title == "Splitbits" %}active{% endif %}'><img src='/assets/images/brandname-splitbits.png' /></a>
+  <a href='/koins' class='brandname {% if page.title == "Koins" %}active{% endif %}'><img src='/assets/images/brandname-koins.png' /></a>
 </nav>

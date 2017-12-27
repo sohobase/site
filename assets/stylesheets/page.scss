@@ -65,7 +65,9 @@ a { text-decoration: none; }
   img { max-width: 90%; }
   strong {
     margin: ($unit / 2) 0 0 0 ;
-    color: $text-secondary;
+  }
+  .text-secondary {
+    opacity: 0.75;
   }
 }
 
@@ -84,7 +86,6 @@ a { text-decoration: none; }
     }
     .text-secondary {
       text-decoration: none;
-      opacity: 0.75;
       * {
         font-style: inherit;
         color: $text;
